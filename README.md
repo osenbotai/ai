@@ -1,0 +1,2 @@
+# ai
+osen bot ai
