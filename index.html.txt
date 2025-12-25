@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSEN BOT AI - Premium XAUUSD Trading Bot</title>
+    <meta name="description" content="AI Powered Gold Trading Bot with SMC, ICT & Liquidity Detection">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header sticky">
+        <div class="logo">🤖 OSEN BOT AI</div>
+        <nav class="nav-desktop">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="hamburger" onclick="toggleMobileMenu()">☰</div>
+        <div class="theme-toggle" onclick="toggleTheme()">🌙</div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home" onclick="toggleMobileMenu()">Home</a>
+        <a href="#features" onclick="toggleMobileMenu()">Features</a>
+        <a href="#dashboard" onclick="toggleMobileMenu()">Dashboard</a>
+        <a href="#pricing" onclick="toggleMobileMenu()">Pricing</a>
+        <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
+    </div>
+
+    <section id="home" class="hero reveal">
+        <div class="hero-content">
+            <h1>AI Powered XAUUSD Trading Bot</h1>
+            <p class="subtitle">Smart • Secure • Automated • 24×7</p>
+            <div class="ai-status" id="aiStatus">AI Analyzing Market...</div>
+            <div class="market-session" id="marketSession">Market Session: London</div>
+            <button class="cta-btn" onclick="scrollToSection('dashboard')">Launch Demo</button>
+        </div>
+        <div class="bot-pulse"></div>
+    </section>
+
+    <section id="features" class="section reveal">
+        <h2>🚀 Extraordinary Features</h2>
+        <div class="cards">
+            <div class="card">🧠 SMC & ICT Engine</div>
+            <div class="card">🌊 Liquidity Detection</div>
+            <div class="card">📊 AI Confidence Meter</div>
+            <div class="card">🔒 Advanced Risk Control</div>
+            <div class="card">⏰ 24×7 Automation</div>
+            <div class="card">📈 Live Equity Curve</div>
+        </div>
+    </section>
+
+    <section id="dashboard" class="section light reveal">
+        <h2>📊 Premium Live Demo Dashboard</h2>
+        <p class="disclaimer">Simulation Mode • Fake Data • Trading Involves Risk</p>
+
+        <div class="trust-stats">
+            <span>👥 Users Online: <span id="usersOnline">47</span></span>
+            <span>📊 Trades Today: <span id="tradesToday">0</span></span>
+            <span>📈 Avg ROI Today: <span id="avgRoi">+2.4%</span></span>
+        </div>
+
+        <div class="controls">
+            <div class="control-box">
+                <h3>Mode</h3>
+                <select id="tradingMode">
+                    <option value="safe">Safe</option>
+                    <option value="aggressive">Aggressive</option>
+                    <option value="custom">Custom</option>
+                </select>
+            </div>
+            <div class="control-box status-box">
+                <h3>Bot Control</h3>
+                <p id="botStatus" class="status-off">OFF</p>
+                <p id="healthStatus" class="health-stable">Stable</p>
+                <div class="confidence">AI Confidence: <span id="confidence">85%</span></div>
+                <button id="toggleBtn" onclick="toggleBot()">Turn ON Bot</button>
+                <button id="resetBtn" onclick="resetDemo()">Reset</button>
+            </div>
+        </div>
+
+        <div class="dashboard grid">
+            <div class="glass-card" title="Current Account Balance"><h3>Balance</h3><p class="counter" id="balance">10000</p></div>
+            <div class="glass-card" title="Profit Today"><h3>Today's Profit</h3><p class="counter profit" id="todayProfit">0</p></div>
+            <div class="glass-card" title="Cumulative Profit"><h3>Total Profit</h3><p class="counter profit" id="totalProfit">0</p></div>
+            <div class="glass-card" title="Winning Trades %"><h3>Win Rate</h3><p id="winRate">0%</p></div>
+            <div class="glass-card" title="Maximum % Drop"><h3>Drawdown</h3><p id="drawdown">0%</p></div>
+            <div class="glass-card" title="Current Risk Level"><h3>Risk</h3><p id="riskExposure">0%</p></div>
+        </div>
+
+        <h3>📈 Live Equity Curve</h3>
+        <canvas id="equityChart"></canvas>
+
+        <div class="alerts" id="alerts"></div>
+
+        <h3>📝 Live Trades Feed</h3>
+        <div class="table-container">
+            <table>
+                <thead><tr><th>Time</th><th>Pair</th><th>Type</th><th>Entry</th><th>Profit</th><th>Reason</th></tr></thead>
+                <tbody id="tradeTable"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="reveal">
+        © 2025 OSEN BOT AI • Demo Only • High Risk Warning
+    </footer>
+
+    <div class="risk-popup" id="riskPopup">
+        <div class="popup-content">
+            <h3>⚠️ Risk Disclaimer</h3>
+            <p>Trading CFDs/Forex involves substantial risk of loss. This is a demo simulation.</p>
+            <button onclick="document.getElementById('riskPopup').style.display='none'">I Understand</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
